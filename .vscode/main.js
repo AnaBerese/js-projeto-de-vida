@@ -1,4 +1,3 @@
-
 const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo");
 
@@ -36,20 +35,19 @@ function calculaTempo(tempoObjetivo){
     minutos %= 60;
     horas %= 24;
 
-    if(tempoFinal > 0){
-    return [dias, horas, minutos, segundos ];
-}else{
-    return[0,0,0,0];
-}
+    if (tempoFinal > 0){
+    return [dias, horas, minutos, segundos];
+    }else{
+        return[0, 0, 0, 0];
+    }
 }
 
 function atualizarCronometro(){
     for(let i = 0; i < contadores.length; i++){
-        document.getElementById("dias"+ i) .textContent = calculaTempo(tempos[i]) [0];
-        document.getElementById("dias"+ i) .textContent = calculaTempo(tempos[i]) [1];
-        document.getElementById("dias"+ i) .textContent = calculaTempo(tempos[i]) [2];
-        document.getElementById("dias"+ i) .textContent = calculaTempo(tempos[i]) [3];
-
+        document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[0];
+        document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[1];
+        document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[2];
+        document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[3];
     } 
 }
 function comecaCronometro(){
